@@ -1,0 +1,10 @@
+from flask import Flask, request, jsonify
+
+app = Flask(__name__)  # Initialize flask app
+
+@app.route("/", methods=["GET"])  # ✅ FIXED HERE
+def home():
+    return "Welcome to my world"
+
+if __name__ == "__main__":
+    app.run()
